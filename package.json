@@ -4,11 +4,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prepare": "husky install",
+    "test": "prettier --check . && eslint \"**/*.css\""
   },
   "devDependencies": {
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^6.0.0",
     "prettier": "2.2.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
