@@ -1,3 +1,13 @@
-import fs from "fs";
+import express from "express";
 
-console.log(fs.readFileSync("./README.md", "utf-8"));
+const PORT = process.env.PORT || 3001;
+
+const app = express();
+
+app.use("/storybook", express.static("dist/storybook"));
+
+app.use(express.static("dist/app"));
+
+app.listen(PORT, () => {
+  console.log(`Server listening at http://localhost:${PORT}`);
+});
