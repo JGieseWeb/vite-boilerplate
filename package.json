@@ -4,7 +4,7 @@
   "scripts": {
     "client:dev": "vite",
     "client:build": "vite build",
-    "server:dev": "tsnd-project tsconfig.server.json src/server",
+    "server:dev": "tsnd --project tsconfig.server.json src/server",
     "server:build": "tsc --project tsconfig.server.json",
     "storybook:build": "build-storybook -o dist/storybook",
     "storybook": "start-storybook -p 6006",
